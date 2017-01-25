@@ -1,14 +1,17 @@
+// var model = require('./model.js');
 var app;
 
 app = {
   init: function(){
-    app.todos.forEach(function(each) {
+    app.displayStoredTodos();
+  },
+  displayStoredTodos: function(){
+    for (var key in Model.storage) {
       var todos = document.getElementById('todos');
       var todo = document.createElement('li');
-      todo.textContent = each;
+      todo.textContent = key;
       todos.appendChild(todo);
-    });
-  },
-  todos: ['eat healthy', 'exercise', 'build career']
+    }
+  }
 };
 
