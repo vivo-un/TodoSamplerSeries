@@ -18,4 +18,12 @@ Model.prototype.addTodo = function(newTodo) {
   this.storage[newTodo] = new Todo(newTodo);
 };
 
+Model.prototype.completeTodo = function(todo) {
+  this.storage[todo].done = true;
+};
+
+Model.prototype.getAllOfTodo = function(todo) {
+  return this.storage[todo];
+};
+
 var model = new Model();
