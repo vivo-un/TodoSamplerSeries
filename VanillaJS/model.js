@@ -7,7 +7,7 @@ var Model = function() {
   };
 };
 
-Model.prototype.Todo = function(newTodo) {
+Todo = function(newTodo) {
   return {
     todo: newTodo,
     done: false
@@ -15,7 +15,8 @@ Model.prototype.Todo = function(newTodo) {
 };
 
 Model.prototype.addTodo = function(newTodo) {
-  Model.storage[newTodo] = new Todo(newTodo);
+  this.storage[newTodo] = new Todo(newTodo);
+  console.log('model storage is ', this.storage);
 };
 
 var model = new Model();

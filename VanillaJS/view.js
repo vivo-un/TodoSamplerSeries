@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var View = function() {
     this.todos = document.getElementById('todos');
     this.addTodoBtn = document.getElementById('addTodoBtn');
-    console.log('addTodoBtn from view ', document.getElementById('addTodoBtn'));
+    this.newTodoInput = document.getElementById('newTodoInput');
   };
 
   View.prototype.displayStoredTodos = function() {
