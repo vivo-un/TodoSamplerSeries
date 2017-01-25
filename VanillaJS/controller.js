@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
       console.log('e is ', e.srcElement);
       model.completeTodo(e.srcElement.innerText);
       var allOfTodo = model.getAllOfTodo(e.srcElement.innerText);
-      view.displayTodo(allOfTodo);
+      view.displayTodo(allOfTodo, true);
     }
   };
 });
