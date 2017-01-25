@@ -1,13 +1,21 @@
-var View = function() {
-  this.todos = document.getElementById('todos');
-};
+var view;
 
-View.prototype.displayStoredTodos = function() {
-  for (var key in model.storage) {
-    var todo = document.createElement('li');
-    todo.textContent = key;
-    todos.appendChild(todo);
-  }
-};
+document.addEventListener("DOMContentLoaded", function() {
+  var View = function() {
+    this.todos = document.getElementById('todos');
+    this.addTodoBtn = document.getElementById('addTodoBtn');
+    console.log('addTodoBtn from view ', document.getElementById('addTodoBtn'));
+  };
 
-var view = new View();
+  View.prototype.displayStoredTodos = function() {
+    for (var key in model.storage) {
+      var todo = document.createElement('li');
+      todo.textContent = key;
+      todos.appendChild(todo);
+    }
+  };
+
+  View.prototype.displayNewTodo = function() {};
+
+  view = new View();
+});
