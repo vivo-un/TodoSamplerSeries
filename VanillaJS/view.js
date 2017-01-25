@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var View = function() {
     this.todos = document.getElementById('todos');
     this.addTodoBtn = document.getElementById('addTodoBtn');
-    this.newTodoInput = document.getElementById('newTodoInput');
   };
 
   View.prototype.displayStoredTodos = function() {
@@ -15,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  View.prototype.displayNewTodo = function() {};
+  View.prototype.displayNewTodo = function(newTodo) {
+    var todo = document.createElement('li');
+    todo.textContent = newTodo;
+    todos.appendChild(todo);
+  };
 
   view = new View();
 });

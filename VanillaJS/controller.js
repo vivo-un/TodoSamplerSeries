@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
       //display new todo in view
       var newTodo = document.getElementById('newTodoInput').value;
       model.addTodo(newTodo);
-      view.displayStoredTodos();
+      view.displayNewTodo(newTodo);
     }
   };
 });
