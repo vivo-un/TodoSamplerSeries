@@ -16,7 +16,6 @@ Todo = function(newTodo) {
 
 Model.prototype.addTodo = function(newTodo) {
   this.storage[newTodo] = new Todo(newTodo);
-  console.log('model storage is ', this.storage);
 };
 
 var model = new Model();

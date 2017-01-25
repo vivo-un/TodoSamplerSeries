@@ -8,13 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   View.prototype.displayStoredTodos = function() {
     for (var key in model.storage) {
-      var todo = document.createElement('li');
-      todo.textContent = key;
-      todos.appendChild(todo);
+      this.displayTodo(key);
     }
   };
 
-  View.prototype.displayNewTodo = function(newTodo) {
+  View.prototype.displayTodo = function(newTodo) {
     var todo = document.createElement('li');
     todo.textContent = newTodo;
     todos.appendChild(todo);

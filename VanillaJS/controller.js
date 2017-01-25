@@ -11,12 +11,9 @@ document.addEventListener("DOMContentLoaded", function(){
     },
     handleAddNewTodo: function(e) {
       e.preventDefault();
-      //get todo
-      //add todo to model
-      //display new todo in view
       var newTodo = document.getElementById('newTodoInput').value;
       model.addTodo(newTodo);
-      view.displayNewTodo(newTodo);
+      view.displayTodo(newTodo);
     }
   };
 });
