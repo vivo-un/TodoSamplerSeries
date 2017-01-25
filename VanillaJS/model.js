@@ -1,5 +1,10 @@
 var Model = function() {
-  this.storage = {};
+  this.storage = {
+    'eat healthy': {
+      todo: 'eat healthy',
+      done: false
+    }
+  };
 };
 
 Model.prototype.Todo = function(newTodo) {
@@ -12,3 +17,5 @@ Model.prototype.Todo = function(newTodo) {
 Model.prototype.addTodo = function(newTodo) {
   Model.storage[newTodo] = new Todo(newTodo);
 };
+
+var model = new Model();
