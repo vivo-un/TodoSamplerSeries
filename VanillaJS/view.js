@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   View.prototype.displayTodo = function(newTodo, done) {
     var todo = document.createElement('li');
     todo.textContent = newTodo.todo;
+    todo.id = newTodo.todo;
     todo.addEventListener('click', function(e){
       app.handleCompleteTodo(e);
     });
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log('this is done');
     }
     todos.appendChild(todo);
+  };
+
+  View.prototype.undisplayTodo = function(todo) {
+    var child = document.getElementById(todo);
+    var parent = todos;
+    console.log('child is ', child);
+    parent.removeChild(child);
   };
 
   view = new View();

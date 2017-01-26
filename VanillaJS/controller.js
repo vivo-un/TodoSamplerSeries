@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
     handleCompleteTodo: function(e) {
       console.log('e is ', e.srcElement);
       model.completeTodo(e.srcElement.innerText);
+      view.undisplayTodo(e.srcElement.innerText);
       var allOfTodo = model.getAllOfTodo(e.srcElement.innerText);
       view.displayTodo(allOfTodo, true);
     }
